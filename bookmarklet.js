@@ -14,14 +14,14 @@ function addScript(src) {
 anchors = document.querySelectorAll('a');
 
 for (var i=0; i <= anchors.length; i++){
-	if (anchors[i].href.endsWith('hi.mp4')) {
-		addScript(vlcHost + '/requests/status.xml?command=fullscreen');
-		addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
-		break;
-	}
+    if (anchors[i].href.endsWith('hi.mp4')) {
+        if (confirm ("Go fullscreen?")) {
+            addScript(vlcHost + '/requests/status.xml?command=fullscreen');
+        }
+        addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
+        break;
+    }
 }
-
-
 
 // ----
 // VLC Commands
