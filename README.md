@@ -8,5 +8,10 @@ The first script I've added is a bookmarklet to scrape any mp4 links from a web 
 This requires your VLC player to be running and to have web interface enabled.
 
 Usage
+-----
 
+Create a bookmark in your browser with the following link:
+
+```
 javascript:(function(){if(window.myBookmarklet!==undefined){myBookmarklet();}else{document.body.appendChild(document.createElement('script')).src='https://raw.github.com/m0nkmaster/playinvlc/master/bookmarklet.js?';}})();
+```
