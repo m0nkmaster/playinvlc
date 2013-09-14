@@ -35,6 +35,7 @@
     }
 
     for (i = 0; i <= anchors.length; i += 1) {
+        alert('Link!');
         if (anchors[i].href.endsWith(fileSuffix)) {
             if (confirm("Toggle fullscreen?")) {
                 addScript(vlcHost + '/requests/status.xml?command=fullscreen');
