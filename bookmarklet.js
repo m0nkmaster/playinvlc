@@ -16,7 +16,7 @@
 (function () {
     "use strict";
 
-    var vlcHost = 'http://192.168.1.73:8080',
+    var vlcHost = 'http://192.168.1.65:8080',
         fileSuffix = 'hi.mp4',
         anchors = document.querySelectorAll('a'),
         i = 0;
