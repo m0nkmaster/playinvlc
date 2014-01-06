@@ -39,7 +39,7 @@
             if (confirm("Toggle fullscreen?")) {
                 addScript(vlcHost + '/requests/status.xml?command=fullscreen');
             }
-            addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
+            addScript(vlcHost + '/requests/status.xml?command=in_enqueue&input=' + anchors[i]);
             break;
         }
     }
