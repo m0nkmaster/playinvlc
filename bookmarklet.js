@@ -36,7 +36,7 @@
 
     for (i = 0; i <= anchors.length; i += 1) {
         if (anchors[i].href.endsWith(fileSuffix)) {
-            if (confirm("Play immediately? Otherwise add to queue.")) {
+            if (confirm("Play immediately? Press Cancel to add to queue.")) {
                 addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
             } else {
                 addScript(vlcHost + '/requests/status.xml?command=in_enqueue&input=' + anchors[i]);
