@@ -36,11 +36,11 @@
 
     for (i = 0; i <= anchors.length; i += 1) {
         if (anchors[i].href.endsWith(fileSuffix)) {
-            // if (confirm("Toggle fullscreen?")) {
-            //     addScript(vlcHost + '/requests/status.xml?command=fullscreen');
-            // }
-            //to add to queue use: in_enqueue
-            addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
+            if (confirm("Play immediately? Otherwise add to queue.")) {
+                addScript(vlcHost + '/requests/status.xml?command=in_play&input=' + anchors[i]);
+            } else {
+                addScript(vlcHost + '/requests/status.xml?command=in_enqueue&input=' + anchors[i]);
+            }
             break;
         }
     }
